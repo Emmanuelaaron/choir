@@ -1,0 +1,57 @@
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Login In</h2>
+        </div>
+
+        <div class="row mt-1 d-flex justify-content-end" data-aos="fade-right" data-aos-delay="100">
+
+          <div class="col-lg-5">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Plot 87, Kampala Road</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>worshiparts@watoto.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+256 705 181168</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="100">
+
+            <%= form_for(:session, url: signin_path, html: {class: "php-email-form"}) do |f| %>
+              <div class="row">
+                <div class="col-md-6 form-group">
+                    <%= f.email_field :email ,class:'form-control', placeholder:'Email', :required => true%>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <%= f.password_field :password ,class:'form-control', placeholder:'password', :required => true%>
+                </div>
+              </div>
+              <div class="my-3">
+                <p class="notice"><%= notice %></p>
+                <p class="alert text-danger"><%= alert %></p>
+              </div>
+              <div class="text-center"><button type="submit">Login</button></div>
+              <% end%>
+         
+          </div>
+
+        </div>
+
+      </div>
+    </section>
