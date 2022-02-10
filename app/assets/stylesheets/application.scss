@@ -424,7 +424,6 @@ body {
     background: url("../img/hero-bg.jpg") top center;
     background-size: cover;
     position: relative;
-    margin-bottom: -90px;
     z-index: 99;
     transition: 0.3s;
   }
@@ -527,6 +526,21 @@ body {
     text-align: center;
     padding-bottom: 30px;
   }
+
+  .section-titl {
+    padding-bottom: 30px;
+  }
+  
+  .section-titl h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    color: #fff;
+  }
+
+
   .section-title h2 {
     font-size: 32px;
     font-weight: bold;
@@ -534,6 +548,11 @@ body {
     margin-bottom: 20px;
     padding-bottom: 0;
     color: #054a85;
+  }
+  td {
+    color: #054a85;
+    text-transform: uppercase;
+    font-size: 20px;
   }
   .section-title p {
     margin-bottom: 0;
@@ -1372,7 +1391,11 @@ body {
   }
   .my-table {
     margin-top: 200px;
-    background-color: rgba(255, 255, 255, 0.7);;
+    // background-color: rgba(255, 255, 255, 0.7);;
+  }
+
+  table, th, td {
+    border: 2px solid #f6b024;
   }
   .contact:before {
     content: "";
@@ -1966,6 +1989,7 @@ body {
     padding: 0 0 30px 0;
     color: #fff;
     font-size: 14px;
+    margin-top: 25px;
   }
   #footer .copyright {
     text-align: center;
