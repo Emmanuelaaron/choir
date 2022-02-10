@@ -22,6 +22,5 @@ class SessionsController < ApplicationController
 
   def sign_in(user)
     session[:user_id] = user.id
-    flash[:success] = 'Successfuly Logged in!'
   end
 end
