@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   post '/signin', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
 
-  root to: 'sessions#welcome'
+  root to: 'choirmembers#welcome'
 end
