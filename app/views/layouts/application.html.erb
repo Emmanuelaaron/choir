@@ -55,7 +55,20 @@
 
     </div>
   </header>
-    <%= yield %>
-    <%= javascript_pack_tag 'rails' %>
+    <main id="main">
+     <%= yield %>
+     <%= javascript_pack_tag 'rails' %>
+    </main>
+    <footer id="footer">
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Watoto choir</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="https://isabirye.netlify.app/">Emmanuel</a>
+      </div>
+    </div>
+  </footer>
   </body>
 </html>

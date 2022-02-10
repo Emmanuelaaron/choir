@@ -112,7 +112,7 @@ class ChoirmembersController < ApplicationController
   end
 
   def downtown
-    @members  = ChoirMember.downtown_members
+    @members = ChoirMember.downtown_members
   end
 
   def bweyogerere
@@ -146,6 +146,7 @@ class ChoirmembersController < ApplicationController
   def juba
     @members = ChoirMember.juba_members
   end
+
   private
 
   def member_params
