@@ -111,6 +111,41 @@ class ChoirmembersController < ApplicationController
     @members = ChoirMember.kansanga_members
   end
 
+  def downtown
+    @members  = ChoirMember.downtown_members
+  end
+
+  def bweyogerere
+    @members = ChoirMember.bweyogerere_members
+  end
+
+  def kyengera
+    @members = ChoirMember.kyengera_members
+  end
+
+  def lubowa
+    @members = ChoirMember.lubowa_members
+  end
+
+  def entebbe
+    @members = ChoirMember.entebbe_members
+  end
+
+  def gulu
+    @members = ChoirMember.gulu_members
+  end
+
+  def mbarara
+    @members = ChoirMember.mbarara_members
+  end
+
+  def bugolobi
+    @members = ChoirMember.bugolobi_members
+  end
+
+  def juba
+    @members = ChoirMember.juba_members
+  end
   private
 
   def member_params

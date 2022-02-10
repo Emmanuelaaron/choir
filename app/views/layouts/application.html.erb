@@ -14,7 +14,7 @@
     <div id="topbar" class="fixed-top d-flex align-items-center ">
     <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">worshiparts@watotochurch.com</a>
+        <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">worship@watotochurch.com</a>
         <i class="bi bi-phone-fill phone-icon"></i> +256 705 181168
       </div>
       <div class="cta d-none d-md-block">
@@ -32,16 +32,16 @@
       <nav id="navbar" class="navbar">
         <ul>
           <%if current_user %>
-          <li><a class="nav-link scrollto" href="#hero">Downtown</a></li>
+          <li><%= link_to 'downtown', downtown_path, class:'nav-link scrollto'%></li>
           <li><%= link_to 'Kansanga', kansanga_path, class:'nav-link scrollto'%></li>
-          <li><a class="nav-link scrollto" href="#services">Lubowa</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Kyengera</a></li>
-          <li><a class="nav-link scrollto" href="#teamm">Bweyogerere</a></li>
-          <li><a class="nav-link scrollto" href="#pricing">Gulu</a></li>
-          <li><a href="blog.html">Bugolobi</a></li>
-          <li><a href="blog.html">Entebbe</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Juba</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Mbarara</a></li>
+          <li><%= link_to 'Lubowa', lubowa_path, class:'nav-link scrollto'%></li>
+           <li><%= link_to 'Kyengera', kyengera_path, class:'nav-link scrollto'%></li>
+           <li><%= link_to 'Bweyogerere', bweyogerere_path, class:'nav-link scrollto'%></li>
+           <li><%= link_to 'Gulu', gulu_path, class:'nav-link scrollto'%></li>
+           <li><%= link_to 'Bugolobi', bugolobi_path, class:'nav-link scrollto'%></li>
+           <li><%= link_to 'Entebbe', entebbe_path, class:'nav-link scrollto'%></li>
+           <li><%= link_to 'Juba', lubowa_path, class:'nav-link scrollto'%></li>
+           <li><%= link_to 'Mbarara', mbarara_path, class:'nav-link scrollto'%></li>
           <li><%= link_to 'Logout', logout_path, class:'nav-link scrollto'%></li>
           <%end%>
           <%if current_user.nil?%>
