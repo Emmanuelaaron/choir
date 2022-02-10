@@ -8,6 +8,7 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %> 
+    <%=favicon_link_tag asset_path('favicon.ico')%>
   </head>
 
   <body class="text-center">
@@ -59,7 +60,7 @@
      <%= yield %>
      <%= javascript_pack_tag 'rails' %>
     </main>
-    <footer id="footer">
+    <footer id="footer" class="mt-5">
 
     <div class="container">
       <div class="copyright">
