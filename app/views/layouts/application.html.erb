@@ -10,7 +10,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %> 
   </head>
 
-  <body class="">
+  <body class="text-center">
     <div id="topbar" class="fixed-top d-flex align-items-center ">
     <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
@@ -32,8 +32,8 @@
       <nav id="navbar" class="navbar">
         <ul>
           <%if current_user %>
-          <li><a class="nav-link scrollto active" href="#hero">Downtown</a></li>
-          <li><a class="nav-link scrollto" href="#about">Kansanga</a></li>
+          <li><a class="nav-link scrollto" href="#hero">Downtown</a></li>
+          <li><%= link_to 'Kansanga', kansanga_path, class:'nav-link scrollto'%></li>
           <li><a class="nav-link scrollto" href="#services">Lubowa</a></li>
           <li><a class="nav-link scrollto " href="#portfolio">Kyengera</a></li>
           <li><a class="nav-link scrollto" href="#teamm">Bweyogerere</a></li>

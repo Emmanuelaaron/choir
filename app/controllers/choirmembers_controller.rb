@@ -100,13 +100,15 @@ class ChoirmembersController < ApplicationController
 
   def create
     @member = ChoirMember.create(member_params)
-    p member_params, 'kjhgfdhjkgds'
-    p @member.errors.messages
     if @member.save
       redirect_to root_path, notice: 'Choir Member Added to the Database'
     else
       redirect_to add_member_path, alert: 'something aint right! Try again later'
     end
+  end
+
+  def kansanga
+    @members = ChoirMember.kansanga_members
   end
 
   private

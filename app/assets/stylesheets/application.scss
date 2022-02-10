@@ -1370,6 +1370,10 @@ body {
     background: url("../img/contact-bg.png") left center no-repeat;
     position: relative;
   }
+  .my-table {
+    margin-top: 200px;
+    background-color: rgba(255, 255, 255, 0.7);;
+  }
   .contact:before {
     content: "";
     background: rgba(255, 255, 255, 0.7);
