@@ -18,14 +18,14 @@
         <i class="bi bi-phone-fill phone-icon"></i> +256 705 181168
       </div>
       <div class="cta d-none d-md-block">
-        <a href="#about" class="scrollto">Get Started</a>
+        <%= link_to 'Add Choir Member', add_member_path, :class => "scrollto"%>
       </div>
     </div>
   </div>
   <header id="header" class="fixed-top d-flex align-items-center ">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="index.html">Choir</a></h1>
+      <h1 class="logo"><%= link_to 'Choir', root_path%></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href=index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -48,7 +48,6 @@
           <li><%= link_to 'Admin Login', signin_path, class:'nav-link scrollto'%></li>
           <%end%>
         </ul>
-        <%# <i class="bi bi-list mobile-nav-toggle"></i> %>
         <span class="mobile-nav-toggle">
         <%=content_tag(:li, fa_icon("solid bars"))%>
         </span>
@@ -56,7 +55,6 @@
 
     </div>
   </header>
-
     <%= yield %>
     <%= javascript_pack_tag 'rails' %>
   </body>

@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   helper_method :current_user
   def authenticate_user!
-    redirect_to sessions_new_path if current_user.nil?
+    redirect_to signin_path if current_user.nil?
   end
 
   def current_user

@@ -1,4 +1,7 @@
 class ChoirmembersController < ApplicationController
+  #   before_action :authenticate_user!
+  def new; end
+
   def welcome
     kansas = ChoirMember.kansanga_members
     downtown = ChoirMember.downtown_members
@@ -92,8 +95,23 @@ class ChoirmembersController < ApplicationController
     @summaries['Mbarara']['base'] = mbarara.where('voice' => 'base').count
     @summaries['Mbarara']['baritone'] = mbarara.where('voice' => 'baritone').count
 
-    p @summaries
-
     @summaries
+  end
+
+  def create
+    @member = ChoirMember.create(member_params)
+    p member_params, 'kjhgfdhjkgds'
+    p @member.errors.messages
+    if @member.save
+      redirect_to root_path, notice: 'Choir Member Added to the Database'
+    else
+      redirect_to add_member_path, alert: 'something aint right! Try again later'
+    end
+  end
+
+  private
+
+  def member_params
+    params['member'].permit(:firstname, :lastname, :contact, :cellnumber, :celebrationpoint, :voice)
   end
 end
