@@ -13,6 +13,7 @@ class ChoirmembersController < ApplicationController
     bugosi = ChoirMember.bugolobi_members
     juba = ChoirMember.juba_members
     mbarara = ChoirMember.mbarara_members
+    jinja = ChoirMember.jinja_members
     @summaries = {}
 
     @summaries['Kansanga'] = {}
@@ -94,6 +95,14 @@ class ChoirmembersController < ApplicationController
     @summaries['Mbarara']['Alto'] = mbarara.where('voice' => 'Alto').count
     @summaries['Mbarara']['Bass'] = mbarara.where('voice' => 'Bass').count
     @summaries['Mbarara']['Baritone'] = mbarara.where('voice' => 'Baritone').count
+
+    @summaries['Jinja'] = {}
+    @summaries['Jinja']['total'] = jinja.count
+    @summaries['Jinja']['Tenor'] = jinja.where('voice' => 'Tenor').count
+    @summaries['Jinja']['Soprano'] = jinja.where('voice' => 'Soprano').count
+    @summaries['Jinja']['Alto'] = jinja.where('voice' => 'Alto').count
+    @summaries['Jinja']['Bass'] = jinja.where('voice' => 'Bass').count
+    @summaries['Jinja']['Baritone'] = jinja.where('voice' => 'Baritone').count
 
     @summaries
   end
