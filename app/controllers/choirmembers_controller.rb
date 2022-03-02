@@ -14,6 +14,7 @@ class ChoirmembersController < ApplicationController
     juba = ChoirMember.juba_members
     mbarara = ChoirMember.mbarara_members
     jinja = ChoirMember.jinja_members
+    ntinda = ChoirMember.ntinda_members
     @summaries = {}
 
     @summaries['Kansanga'] = {}
@@ -103,6 +104,14 @@ class ChoirmembersController < ApplicationController
     @summaries['Jinja']['Alto'] = jinja.where('voice' => 'Alto').count
     @summaries['Jinja']['Bass'] = jinja.where('voice' => 'Bass').count
     @summaries['Jinja']['Baritone'] = jinja.where('voice' => 'Baritone').count
+
+    @summaries['Ntinda'] = {}
+    @summaries['Ntinda']['total'] = ntinda.count
+    @summaries['Ntinda']['Tenor'] = ntinda.where('voice' => 'Tenor').count
+    @summaries['Ntinda']['Soprano'] = ntinda.where('voice' => 'Soprano').count
+    @summaries['Ntinda']['Alto'] = ntinda.where('voice' => 'Alto').count
+    @summaries['Ntinda']['Bass'] = ntinda.where('voice' => 'Bass').count
+    @summaries['Ntinda']['Baritone'] = ntinda.where('voice' => 'Baritone').count
 
     @summaries
   end
@@ -200,6 +209,14 @@ class ChoirmembersController < ApplicationController
 
   def jinja
     @members = ChoirMember.jinja_members
+    respond_to do |format|
+      format.html
+      format.xlsx
+    end
+  end
+
+  def ntinda
+    @members = ChoirMember.ntinda_members
     respond_to do |format|
       format.html
       format.xlsx
