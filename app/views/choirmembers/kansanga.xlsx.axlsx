@@ -5,6 +5,6 @@ wb.add_worksheet(name: 'Items') do |sheet|
   sheet.add_row ['First Name', 'Last Name', 'Contact', 'Voice', 'Cell Number', 'Email', 'Descipled?']
   # Create entries for each item
   @members.each do |member|
-    sheet.add_row [member.lastname, member.contact, member.voice, member.cellnumber, member.email, member.descipled]
+    sheet.add_row [member.firstname, member.lastname, member.contact, member.voice, member.cellnumber, member.email, member.descipled]
   end
 end
