@@ -15,7 +15,7 @@
     <div id="topbar" class="fixed-top d-flex align-items-center ">
     <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">worship@watotochurch.com</a>
+        <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">worshiparts@watotochurch.com</a>
         <i class="bi bi-phone-fill phone-icon"></i> +256 705 181168
       </div>
       <div class="cta d-none d-md-block">
@@ -33,7 +33,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <%if current_user %>
-          <li><%= link_to 'downtown', downtown_path, class:'nav-link scrollto'%></li>
+          <li><%= link_to 'Downtown', downtown_path, class:'nav-link scrollto'%></li>
           <li><%= link_to 'Kansanga', kansanga_path, class:'nav-link scrollto'%></li>
           <li><%= link_to 'Lubowa', lubowa_path, class:'nav-link scrollto'%></li>
            <li><%= link_to 'Kyengera', kyengera_path, class:'nav-link scrollto'%></li>
@@ -43,6 +43,7 @@
            <li><%= link_to 'Entebbe', entebbe_path, class:'nav-link scrollto'%></li>
            <li><%= link_to 'Juba', lubowa_path, class:'nav-link scrollto'%></li>
            <li><%= link_to 'Mbarara', mbarara_path, class:'nav-link scrollto'%></li>
+           <li><%= link_to 'Jinja', jinja_path, class:'nav-link scrollto'%></li>
           <li><%= link_to 'Logout', logout_path, class:'nav-link scrollto'%></li>
           <%end%>
           <%if current_user.nil?%>

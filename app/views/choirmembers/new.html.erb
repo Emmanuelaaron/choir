@@ -18,31 +18,42 @@
                   <%= f.text_field :lastname ,class:'form-control', placeholder:'Last Name', :required => true%>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <%= f.text_field :contact ,class:'form-control', placeholder:'Contact', :required => true%>
+                  <%= f.text_field :contact ,class:'form-control', placeholder:'Whatsap Number', :required => true%>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <%= f.text_field :email ,class:'form-control', placeholder:'Email', :required => true%>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
                   <%= f.text_field :cellnumber ,class:'form-control', placeholder:'Cell Number', :required => true%>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <%= f.select(:descipled, [
+                      'Did you attend Descipleship classes?',
+                      'YES','NO'
+                      ], {}, :class => "form-control") %>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
                   <%= f.select(:celebrationpoint, [
-                      'select your celebration point',
-                      'kansanga','downtown',
-                      'bweyogerere','kyengera',
-                      'Lubowa', 'entebbe', 'gulu',
-                      'bugolobi', 'juba', 'mbarara'
+                      'Select your celebration point',
+                      'Kansanga','Downtown',
+                      'Bweyogerere','Kyengera',
+                      'Lubowa', 'Entebbe', 'Gulu',
+                      'Bugolobi', 'Juba', 'Mbarara'
                       ], {}, :class => "form-control") %>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
                   <%= f.select(:voice, [
-                      'select your voice',
-                      'tenor','soprano',
-                      'alto','base',
-                      'baritone'
+                      'Select your voice',
+                      "Don't Know",
+                      'Tenor','Soprano',
+                      'Alto','Bass',
+                      'Baritone'
                       ], {}, :class => "form-control") %>
                 </div>
               </div>
               <div class="my-3">
                 <p class="alert text-danger"><%= alert %></p>
+                <p class="alert text-danger"><%= notice %></p>
               </div>
               <div class="text-center"><button type="submit">Add Choir Member</button></div>
               <% end%>

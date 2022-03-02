@@ -1,5 +1,5 @@
 class ChoirmembersController < ApplicationController
-  #   before_action :authenticate_user!
+  before_action :authenticate_user!
   def new; end
 
   def welcome
@@ -17,83 +17,83 @@ class ChoirmembersController < ApplicationController
 
     @summaries['Kansanga'] = {}
     @summaries['Kansanga']['total'] = kansas.count
-    @summaries['Kansanga']['tenor'] = kansas.where('voice' => 'tenor').count
-    @summaries['Kansanga']['soprano'] = kansas.where('voice' => 'soprano').count
-    @summaries['Kansanga']['alto'] = kansas.where('voice' => 'alto').count
-    @summaries['Kansanga']['base'] = kansas.where('voice' => 'base').count
-    @summaries['Kansanga']['baritone'] = kansas.where('voice' => 'baritone').count
+    @summaries['Kansanga']['Tenor'] = kansas.where('voice' => 'Tenor').count
+    @summaries['Kansanga']['Soprano'] = kansas.where('voice' => 'Soprano').count
+    @summaries['Kansanga']['Alto'] = kansas.where('voice' => 'Alto').count
+    @summaries['Kansanga']['Bass'] = kansas.where('voice' => 'Bass').count
+    @summaries['Kansanga']['Baritone'] = kansas.where('voice' => 'Baritone').count
 
     @summaries['Downtown'] = {}
     @summaries['Downtown']['total'] = downtown.count
-    @summaries['Downtown']['tenor'] = downtown.where('voice' => 'tenor').count
-    @summaries['Downtown']['soprano'] = downtown.where('voice' => 'soprano').count
-    @summaries['Downtown']['alto'] = downtown.where('voice' => 'alto').count
-    @summaries['Downtown']['base'] = downtown.where('voice' => 'base').count
-    @summaries['Downtown']['baritone'] = downtown.where('voice' => 'baritone').count
+    @summaries['Downtown']['Tenor'] = downtown.where('voice' => 'Tenor').count
+    @summaries['Downtown']['Soprano'] = downtown.where('voice' => 'Soprano').count
+    @summaries['Downtown']['Alto'] = downtown.where('voice' => 'Alto').count
+    @summaries['Downtown']['Bass'] = downtown.where('voice' => 'Bass').count
+    @summaries['Downtown']['Baritone'] = downtown.where('voice' => 'Baritone').count
 
     @summaries['Bweyogerere'] = {}
     @summaries['Bweyogerere']['total'] = bweyos.count
-    @summaries['Bweyogerere']['tenor'] = bweyos.where('voice' => 'tenor').count
-    @summaries['Bweyogerere']['soprano'] = bweyos.where('voice' => 'soprano').count
-    @summaries['Bweyogerere']['alto'] = bweyos.where('voice' => 'alto').count
-    @summaries['Bweyogerere']['base'] = bweyos.where('voice' => 'base').count
-    @summaries['Bweyogerere']['baritone'] = bweyos.where('voice' => 'baritone').count
+    @summaries['Bweyogerere']['Tenor'] = bweyos.where('voice' => 'Tenor').count
+    @summaries['Bweyogerere']['Soprano'] = bweyos.where('voice' => 'Soprano').count
+    @summaries['Bweyogerere']['Alto'] = bweyos.where('voice' => 'Alto').count
+    @summaries['Bweyogerere']['Bass'] = bweyos.where('voice' => 'Bass').count
+    @summaries['Bweyogerere']['Baritone'] = bweyos.where('voice' => 'Baritone').count
 
     @summaries['Kyengera'] = {}
     @summaries['Kyengera']['total'] = kyengs.count
-    @summaries['Kyengera']['tenor'] = kyengs.where('voice' => 'tenor').count
-    @summaries['Kyengera']['soprano'] = kyengs.where('voice' => 'soprano').count
-    @summaries['Kyengera']['alto'] = kyengs.where('voice' => 'alto').count
-    @summaries['Kyengera']['base'] = kyengs.where('voice' => 'base').count
-    @summaries['Kyengera']['baritone'] = kyengs.where('voice' => 'baritone').count
+    @summaries['Kyengera']['Tenor'] = kyengs.where('voice' => 'Tenor').count
+    @summaries['Kyengera']['Soprano'] = kyengs.where('voice' => 'Soprano').count
+    @summaries['Kyengera']['Alto'] = kyengs.where('voice' => 'Alto').count
+    @summaries['Kyengera']['Bass'] = kyengs.where('voice' => 'Bass').count
+    @summaries['Kyengera']['Baritone'] = kyengs.where('voice' => 'Baritone').count
 
     @summaries['Lubowa'] = {}
     @summaries['Lubowa']['total'] = lubowa.count
-    @summaries['Lubowa']['tenor'] = lubowa.where('voice' => 'tenor').count
-    @summaries['Lubowa']['soprano'] = lubowa.where('voice' => 'soprano').count
-    @summaries['Lubowa']['alto'] = lubowa.where('voice' => 'alto').count
-    @summaries['Lubowa']['base'] = lubowa.where('voice' => 'base').count
-    @summaries['Lubowa']['baritone'] = lubowa.where('voice' => 'baritone').count
+    @summaries['Lubowa']['Tenor'] = lubowa.where('voice' => 'Tenor').count
+    @summaries['Lubowa']['Soprano'] = lubowa.where('voice' => 'Soprano').count
+    @summaries['Lubowa']['Alto'] = lubowa.where('voice' => 'Alto').count
+    @summaries['Lubowa']['Bass'] = lubowa.where('voice' => 'Bass').count
+    @summaries['Lubowa']['Baritone'] = lubowa.where('voice' => 'Baritone').count
 
     @summaries['Entebbe'] = {}
     @summaries['Entebbe']['total'] = ebbs.count
-    @summaries['Entebbe']['tenor'] = ebbs.where('voice' => 'tenor').count
-    @summaries['Entebbe']['soprano'] = ebbs.where('voice' => 'soprano').count
-    @summaries['Entebbe']['alto'] = ebbs.where('voice' => 'alto').count
-    @summaries['Entebbe']['base'] = ebbs.where('voice' => 'base').count
-    @summaries['Entebbe']['baritone'] = ebbs.where('voice' => 'baritone').count
+    @summaries['Entebbe']['Tenor'] = ebbs.where('voice' => 'Tenor').count
+    @summaries['Entebbe']['Soprano'] = ebbs.where('voice' => 'Soprano').count
+    @summaries['Entebbe']['Alto'] = ebbs.where('voice' => 'Alto').count
+    @summaries['Entebbe']['Bass'] = ebbs.where('voice' => 'Bass').count
+    @summaries['Entebbe']['Baritone'] = ebbs.where('voice' => 'Baritone').count
 
     @summaries['Gulu'] = {}
     @summaries['Gulu']['total'] = gulu.count
-    @summaries['Gulu']['tenor'] = gulu.where('voice' => 'tenor').count
-    @summaries['Gulu']['soprano'] = gulu.where('voice' => 'soprano').count
-    @summaries['Gulu']['alto'] = gulu.where('voice' => 'alto').count
-    @summaries['Gulu']['base'] = gulu.where('voice' => 'base').count
-    @summaries['Gulu']['baritone'] = gulu.where('voice' => 'baritone').count
+    @summaries['Gulu']['Tenor'] = gulu.where('voice' => 'Tenor').count
+    @summaries['Gulu']['Soprano'] = gulu.where('voice' => 'Soprano').count
+    @summaries['Gulu']['Alto'] = gulu.where('voice' => 'Alto').count
+    @summaries['Gulu']['Bass'] = gulu.where('voice' => 'Bass').count
+    @summaries['Gulu']['Baritone'] = gulu.where('voice' => 'Baritone').count
 
     @summaries['Bugolobi'] = {}
     @summaries['Bugolobi']['total'] = bugosi.count
-    @summaries['Bugolobi']['tenor'] = bugosi.where('voice' => 'tenor').count
-    @summaries['Bugolobi']['soprano'] = bugosi.where('voice' => 'soprano').count
-    @summaries['Bugolobi']['alto'] = bugosi.where('voice' => 'alto').count
-    @summaries['Bugolobi']['base'] = bugosi.where('voice' => 'base').count
-    @summaries['Bugolobi']['baritone'] = bugosi.where('voice' => 'baritone').count
+    @summaries['Bugolobi']['Tenor'] = bugosi.where('voice' => 'Tenor').count
+    @summaries['Bugolobi']['Soprano'] = bugosi.where('voice' => 'Soprano').count
+    @summaries['Bugolobi']['Alto'] = bugosi.where('voice' => 'Alto').count
+    @summaries['Bugolobi']['Bass'] = bugosi.where('voice' => 'Bass').count
+    @summaries['Bugolobi']['Baritone'] = bugosi.where('voice' => 'Baritone').count
 
     @summaries['Juba'] = {}
     @summaries['Juba']['total'] = juba.count
-    @summaries['Juba']['tenor'] = juba.where('voice' => 'tenor').count
-    @summaries['Juba']['soprano'] = juba.where('voice' => 'soprano').count
-    @summaries['Juba']['alto'] = juba.where('voice' => 'alto').count
-    @summaries['Juba']['base'] = juba.where('voice' => 'base').count
-    @summaries['Juba']['baritone'] = juba.where('voice' => 'baritone').count
+    @summaries['Juba']['Tenor'] = juba.where('voice' => 'Tenor').count
+    @summaries['Juba']['Soprano'] = juba.where('voice' => 'Soprano').count
+    @summaries['Juba']['Alto'] = juba.where('voice' => 'Alto').count
+    @summaries['Juba']['Bass'] = juba.where('voice' => 'Bass').count
+    @summaries['Juba']['Baritone'] = juba.where('voice' => 'Baritone').count
 
     @summaries['Mbarara'] = {}
     @summaries['Mbarara']['total'] = mbarara.count
-    @summaries['Mbarara']['tenor'] = mbarara.where('voice' => 'tenor').count
-    @summaries['Mbarara']['soprano'] = mbarara.where('voice' => 'soprano').count
-    @summaries['Mbarara']['alto'] = mbarara.where('voice' => 'alto').count
-    @summaries['Mbarara']['base'] = mbarara.where('voice' => 'base').count
-    @summaries['Mbarara']['baritone'] = mbarara.where('voice' => 'baritone').count
+    @summaries['Mbarara']['Tenor'] = mbarara.where('voice' => 'Tenor').count
+    @summaries['Mbarara']['Soprano'] = mbarara.where('voice' => 'Soprano').count
+    @summaries['Mbarara']['Alto'] = mbarara.where('voice' => 'Alto').count
+    @summaries['Mbarara']['Bass'] = mbarara.where('voice' => 'Bass').count
+    @summaries['Mbarara']['Baritone'] = mbarara.where('voice' => 'Baritone').count
 
     @summaries
   end
@@ -101,9 +101,10 @@ class ChoirmembersController < ApplicationController
   def create
     @member = ChoirMember.create(member_params)
     if @member.save
-      redirect_to root_path, notice: 'Choir Member Added to the Database'
+      redirect_to root_path, notice: 'Choir Member Added to the DataBase'
     else
-      redirect_to add_member_path, alert: 'something aint right! Try again later'
+      error = @member.errors.messages
+      redirect_to add_member_path, alert: "#{error.keys[0]} #{error.values[0][0]}!"
     end
   end
 
@@ -147,9 +148,14 @@ class ChoirmembersController < ApplicationController
     @members = ChoirMember.juba_members
   end
 
+  def jinja
+    @members = ChoirMember.jinja_members
+  end
+
   private
 
   def member_params
-    params['member'].permit(:firstname, :lastname, :contact, :cellnumber, :celebrationpoint, :voice)
+    params['member'].permit(:firstname, :lastname, :contact, :cellnumber, :celebrationpoint, :voice, :descipled,
+                            :email)
   end
 end

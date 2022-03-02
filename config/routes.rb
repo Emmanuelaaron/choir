@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get '/juba', to: 'choirmembers#juba'
   get 'downtown', to: 'choirmembers#downtown'
   get 'mbarara', to: 'choirmembers#mbarara'
+  get 'jinja', to: 'choirmembers#jinja'
 
   root to: 'choirmembers#welcome'
 end

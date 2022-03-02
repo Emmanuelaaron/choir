@@ -1,8 +1,14 @@
 // Graphical variables
+/*
+ *= require_tree .
+ *= require_self
+ */
 
 // External libraries
 @import "bootstrap/scss/bootstrap";
+@import "bootstrap/dist/css/bootstrap";
 @import "font-awesome";
+// @import "datatables";
 
 /**
 * Template Name: Anyar - v4.7.0
@@ -970,6 +976,9 @@ body {
   }
   .cta p {
     color: #fff;
+  }
+  .notice {
+    margin-top: 20px;
   }
   .cta .cta-btn {
     font-family: "Raleway", sans-serif;
