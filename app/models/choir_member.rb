@@ -13,5 +13,4 @@ class ChoirMember < ApplicationRecord
   scope :juba_members, -> { where('celebrationpoint' => 'Juba') }
   scope :mbarara_members, -> { where('celebrationpoint' => 'Mbarara') }
   scope :jinja_members, -> { where('celebrationpoint' => 'Jinja') }
-  # Ex:- scope :active, -> {where(:active => true)}
 end

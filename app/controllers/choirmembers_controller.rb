@@ -110,46 +110,91 @@ class ChoirmembersController < ApplicationController
 
   def kansanga
     @members = ChoirMember.kansanga_members
+    respond_to do |format|
+      format.html
+      format.xlsx
+    end
   end
 
   def downtown
     @members = ChoirMember.downtown_members
+    respond_to do |format|
+      format.html
+      format.xlsx
+    end
   end
 
   def bweyogerere
     @members = ChoirMember.bweyogerere_members
+    respond_to do |format|
+      format.html
+      format.xlsx
+    end
   end
 
   def kyengera
     @members = ChoirMember.kyengera_members
+    respond_to do |format|
+      format.html
+      format.xlsx
+    end
   end
 
   def lubowa
     @members = ChoirMember.lubowa_members
+
+    respond_to do |format|
+      format.html
+      format.xlsx
+    end
   end
 
   def entebbe
     @members = ChoirMember.entebbe_members
+    respond_to do |format|
+      format.html
+      format.xlsx
+    end
   end
 
   def gulu
     @members = ChoirMember.gulu_members
+    respond_to do |format|
+      format.html
+      format.xlsx
+    end
   end
 
   def mbarara
     @members = ChoirMember.mbarara_members
+    respond_to do |format|
+      format.html
+      format.xlsx
+    end
   end
 
   def bugolobi
     @members = ChoirMember.bugolobi_members
+    respond_to do |format|
+      format.html
+      format.xlsx
+    end
   end
 
   def juba
     @members = ChoirMember.juba_members
+    respond_to do |format|
+      format.html
+      format.xlsx
+    end
   end
 
   def jinja
     @members = ChoirMember.jinja_members
+    respond_to do |format|
+      format.html
+      format.xlsx
+    end
   end
 
   private
