@@ -1,0 +1,45 @@
+  <% if current_user %>
+      <section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title text-light">
+          <h2 class="text-light">Celebration point summaries</h2>
+        </div>
+
+        <div class="row">
+
+          <% @summaries.each do |district, details|%>
+            <div class="col-lg-3 mt-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="member d-flex align-items-start">
+                <div class="member-info">
+                  <h4><%= district %></h4>
+                  <span>Total: <%=details["total"]%></span>
+                  <span>Alto: <%=details["Alto"]%></span>
+                  <span>Baritone: <%=details["Baritone"]%></span>
+                  <span>Soprano: <%=details["Soprano"]%></span>
+                  <span>Tenor: <%=details["Tenor"]%></span>
+                  <span>Bass: <%=details["Bass"]%></span>
+                </div>
+              </div>
+            </div>
+          <%end%>
+
+        </div>
+
+      </div>
+    </section>
+  <% else%>
+  <section id="hero" class="d-flex justify-cntent-center align-items-center">
+    <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-item active">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown"> <span>Choir DataBass</span></h2>
+          <p class="notice text-success bg-light"><%= notice %></p>
+          <p class="animate__animated animate__fadeInUp">Welcome to Watoto church choir dataBass! Please submit your details. Click the link below</p>
+          <%= link_to 'Add Choir Member', add_member_path, :class => "btn-get-started animate__animated animate__fadeInUp scrollto"%>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <%end%>
