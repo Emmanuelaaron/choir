@@ -1,5 +1,5 @@
 class ChoirmembersController < ApplicationController
-  before_action :authenticate_user!, except: %i[new create]
+  before_action :authenticate_user!, except: %i[new create welcome]
   def new; end
 
   def welcome
